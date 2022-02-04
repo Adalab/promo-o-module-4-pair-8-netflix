@@ -3,18 +3,21 @@
     "id": "1",
     "title": "Gambita de dama",
     "gender": "Drama",
+    "synopsis": "Miniserie de 7 episodios. Kentucky, años 60. En plena Guerra Fría, la joven Beth Harmon (Anya Taylor-Joy) es una huérfana con una aptitud prodigiosa para el ajedrez, que lucha contra sus adicciones mientras trata de convertirse en la mejor jugadora del mundo ganando a los grandes maestros, en especial a los rusos.",
     "image": "//localhost:4000/gambita-de-dama.jpg"
   },
   {
     "id": "2",
     "title": "Friends",
     "gender": "Comedia",
+    "synopsis": "Tres hombres y tres mujeres jóvenes son mejores amigos y viven en el mismo conjunto de apartamentos. Ellos enfrentan la vida y el amor en la ciudad de Nueva York y se involucran en los asuntos personales de los demás.",
     "image": "//localhost:4000/friends.jpg"
   },
   {
     "id": "3",
     "title": "Community",
     "gender": "Comedia",
+    "synopsis": "La serie se centra en Jeff Winger (Joel McHale), un abogado que vuelve a la universidad porque el Colegio de Abogados invalida su título, y en las experiencias que tiene en la ficticia universidad de Greendale, Colorado, junto al resto de estudiantes con los que se encuentra allí y con los que monta un grupo de estudio de español. Inicialmente crea el grupo buscando convencer a Britta Perry (Gillian Jacobs), una ex anarquista que trata de poner su vida en orden, de salir con él.",
     "image": "//localhost:4000/Community.jpg"
   }
 ]
