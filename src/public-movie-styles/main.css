@@ -1,13 +1,70 @@
-.article__card{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.article__card {
+  width: 600px;
   height: 600px;
-  border: 0.1875rem solid #14d9c4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid #14d9c4;
+  border-radius: 5px;
+  margin-top: 30px;
+  background-color: white;
 }
 
 .card__img {
-  height: 250px;
+  height: 280px;
+  border-radius: 5px;
 }
-/* .card__title {
-}
-.card__genre {
-} */
 
+.card__title,
+.card__genre,
+.card__synopsis,
+.card__back {
+  margin: 10px 0;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: #54585b;
+  line-height: 22px;
+}
+
+.card__title {
+  font-size: 20px;
+}
+
+.card__back {
+  text-decoration: none;
+  background-color: #14d9c4;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  width: 180px;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+.card__back:hover {
+  transform: scale(1.01);
+  background-color: #10bbaa;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e2fdfa;
+}
+
+.text__wrapper {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
