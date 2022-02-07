@@ -9,9 +9,9 @@ const MoviesList = props => {
     return props.movies.map(movie => {
       return (
         <li key={movie.id} className="card">
-          <img className="card__img" src={movie.image} alt={`Carátula de ${movie.title}`} />
-          <h3 className="card__title">{movie.title}</h3>
-          <p className="card__description">Género: {movie.gender}</p>
+          <img className="card__img" src={movie.image} alt={`Carátula de ${movie.name}`} />
+          <h3 className="card__title">{movie.name}</h3>
+          <p className="card__description">Género: {movie.genre}</p>
         </li>
       );
     });
