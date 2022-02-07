@@ -65,7 +65,6 @@ server.get('/movies', (req, res) => {
 });
 
 server.post('/login', (req, res) => {
-  console.log('backend: ' + req.body);
   const emailLogin = req.body.email;
   const passwordLogin = req.body.password;
   const query = db.prepare(
