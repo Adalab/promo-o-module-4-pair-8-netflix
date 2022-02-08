@@ -59,6 +59,7 @@ const App = () => {
   useEffect(() => {
     if (userId !== "") {
       apiUser.getProfileFromApi(userId).then((response) => {
+        console.log("dentro del get", response)
         setUserName(response.name);
         setUserEmail(response.email);
         setUserPassword(response.password);

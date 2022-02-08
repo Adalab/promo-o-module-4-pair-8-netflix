@@ -58,7 +58,7 @@ const getProfileFromApi = (userId) => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      return data.data;
+      return data;
     });
 };
 
