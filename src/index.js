@@ -157,6 +157,31 @@ server.get('/user/profile', (req, res) => {
   }
 });
 
+server.get('/user/movies', (req, res) => {
+  const id = req.headers['user-id'];
+  const movieIdsQuery = db.prepare(
+    'SELECT movieId FROM rel_movies_users WHERE userId =?'
+  );
+  const movieIds = movieIdsQuery.all(id);
+  console.log(movieIds);
+  // obtenemos las interrogaciones separadas por comas
+  const moviesIdsQuestions = movieIds.map((id) => '?').join(', '); // que nos devuelve '?, ?'
+  // preparamos la segunda query para obtener todos los datos de las películas
+  const moviesQuery = db.prepare(
+    `SELECT * FROM movies WHERE id IN (${moviesIdsQuestions})`
+  );
+
+  // convertimos el array de objetos de id anterior a un array de números
+  const moviesIdsNumbers = movieIds.map((movie) => movie.movieId); // que nos devuelve [1.0, 2.0]
+  // ejecutamos segunda la query
+  const movies = moviesQuery.all(moviesIdsNumbers);
+
+  // respondemos a la petición con
+  res.json({
+    success: true,
+    movies: movies,
+  });
+});
 const staticServerPathWeb = './src/public-react'; // En esta carpeta ponemos los ficheros estáticos
 server.use(express.static(staticServerPathWeb));
 
