@@ -4,24 +4,10 @@ const MoviesList = (props) => {
   const renderMovieList = () => {
     return <ul className="cards">{renderMovies()}</ul>;
   };
-  // const handleMoviesClick = (event) => {
-  //   return fetch(`//localhost:4000/movie/${event.currentTarget.id}`, {
-  //     method: "GET",
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       return data;
-  //     });
-  // };
   const renderMovies = () => {
     return props.movies.map((movie) => {
       return (
-        <li
-          id={movie.id}
-          key={movie.id}
-          className="card"
-          // onClick={handleMoviesClick}
-        >
+        <li id={movie.id} key={movie.id} className="card">
           <img
             className="card__img"
             src={movie.image}
